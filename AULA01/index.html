@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!--Import Google Icon Font-->
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+   <!-- Materialize CSS -->
+   <link rel="stylesheet" href="./css/materialize.css">
+
+   <!-- My Style CSS -->
+   <link rel="stylesheet" href="./css/style.css">
+
+   <title>Materialize</title>
+</head>
+
+<body>
+   <h1>Hello World!</h1>
+
+   <div class="card-panel blue lighten-2 red-text text-darken-2">
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem itaque repellat esse molestiae nostrum quidem error illo dolore sunt enim?</p>
+   </div>
+
+   <!-- 
+      z-depth-X = sombra
+      flow-text = reduz/ajusta o texto conforme o tamanho da tela
+    -->
+   <div class="card-panel indigo z-depth-1 flow-text">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, laudantium veritatis quaerat maxime quibusdam vel sapiente! Unde minima accusamus voluptas eaque excepturi sed id iure voluptatem expedita numquam, beatae illum ipsum, doloribus laborum ut in quas reprehenderit et eos non quod nisi dolores recusandae qui? Assumenda ipsam ab qui asperiores repudiandae, dolorum voluptatem animi optio repellat magni ratione, placeat ipsa.</p>
+   </div>
+
+   <!-- 
+      responsive-img = torna a imagem responsiva 
+      circle = deixa a imagem circular
+   -->
+   <img src="./img/foto1.jpg" class="responsive-img circle" alt="Foto 1">
+
+   <!-- Videos
+      video-container = coloca o vídeo em um container responsivo
+      responsive-video = torna o vídeo responsivo
+    -->
+   <div class="video-container">
+      <iframe width="1381" height="517" src="https://www.youtube.com/embed/nic-7fTnTgQ?list=PLwXQLZ3FdTVGJxKF3ShplF8nMuuxldlEk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+   </div>
+
+
+   <section>
+      <!-- Table
+         bordered = coloca linhas na table
+         striped = deixa ela zebrada
+         highlight = destaque no hover
+         centered = conteúdo centraliado
+         responsive-table = torna a table responsiva
+      -->
+      <table class="striped">
+         <thead>
+            <tr>
+               <th>Name</th>
+               <th>Item Name</th>
+               <th>Item Price</th>
+            </tr>
+         </thead>
+
+         <tbody>
+            <tr>
+               <td>Alvin</td>
+               <td>Eclair</td>
+               <td>$0.87</td>
+            </tr>
+            <tr>
+               <td>Alan</td>
+               <td>Jellybean</td>
+               <td>$3.76</td>
+            </tr>
+            <tr>
+               <td>Jonathan</td>
+               <td>Lollipop</td>
+               <td>$7.00</td>
+            </tr>
+         </tbody>
+      </table>
+   </section>
+
+
+   <!-- jQuery -->
+   <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+   <!-- Materialize JS -->
+   <script src="./js/materialize.js"></script>
+</body>
+
+</html>
