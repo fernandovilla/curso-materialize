@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!--Import Google Icon Font-->
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+   <!-- Materialize CSS -->
+   <link rel="stylesheet" href="./css/materialize.css">
+
+   <!-- My Style CSS -->
+   <link rel="stylesheet" href="./css/style.css">
+
+   <title>Materialize - Navbar - Dropdown</title>
+</head>
+
+<body>
+
+   <ul class="dropdown-content" id="dropdownJS">
+      <li><a href="">Item 1</a></li>
+      <li><a href="">Item 2</a></li>
+      <li><a href="">Item 3</a></li>
+   </ul>
+
+   <nav class="navbar-fixed">
+      <div class="nav-wrapper container">
+         <a href="#" class="brand-logo left">Logo</a>
+         <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="#">Sass</a></li>
+            <li><a href="#">Components</a></li>
+            <li><a href="#" class="dropdown-trigger" data-target="dropdownJS" data-beloworigin="true">
+               <i class="material-icons right">arrow_drop_down</i>
+               JavaScript
+            </a></li>
+         </ul>
+      </div>
+   </nav>
+
+ 
+
+
+
+
+   <!-- jQuery -->
+   <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+   <!-- Materialize JS -->
+   <script src="./js/materialize.js"></script>
+
+   <script>
+      //$("button-collapse").sideNav();
+      $(".dropdown-trigger").dropdown();
+   </script>
+
+</body>
+
+</html>
