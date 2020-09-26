@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Materialize CSS -->
+  <link rel="stylesheet" href="./css/materialize.css">
+
+  <!-- My Style CSS -->
+  <link rel="stylesheet" href="./css/style.css">
+
+  <title>Materialize - Chip</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="chip">
+      <img src="./img/user.png" alt="">
+      Fernando Villa
+    </div>
+
+    <div class="chip">
+      Maria Fernanda
+      <i class="material-icons close">close</i>
+    </div>
+    <div class="chip">
+      Denise
+      <i class="material-icons close">close</i>
+    </div>
+
+    <!-- Não funcionou nesta versão -->
+    <div class="chips">
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+  <!-- Materialize JS -->
+  <script src="./js/materialize.js"></script>
+
+  <script>
+    $('.chips').material_chip();
+  </script>
+
+</body>
+
+</html>
