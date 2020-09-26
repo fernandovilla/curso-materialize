@@ -35,8 +35,9 @@
     </div>
 
     <!-- Não funcionou nesta versão -->
-    <div class="chips">
+    <div class="chips chips-initial chips-autocomplete">
     </div>
+    <button id="mostraDados" class="btn">Mostrar Dados</button>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
@@ -44,7 +45,45 @@
   <script src="./js/materialize.js"></script>
 
   <script>
-    $('.chips').material_chip();
+    $('#mostraDados').click(function () {
+      const chips = document.querySelector('.chips');
+      const instance = M.Chips.getInstance(chips);
+
+      instance.chipsData.forEach(item => console.log(item.tag));
+    });
+
+
+    $('.chips').chips();
+
+    $('.chips-initial').chips({
+      data: [{
+        tag: 'Apple',
+      }, {
+        tag: 'Microsoft',
+      }, {
+        tag: 'Google',
+      }],
+    });
+
+    $('.chips-placeholder').chips({
+      placeholder: 'Enter a tag',
+      secondaryPlaceholder: '+Tag',
+    });
+
+    $('.chips-autocomplete').chips({
+      autocompleteOptions: {
+        data: {
+          'Apple': null,
+          'Microsoft': null,
+          'Google': null,
+          'Fernando Villa': null,
+          'Maria Fernanda Villa': null,
+          'Denise Villa': null
+        },
+        limit: Infinity,
+        minLength: 1
+      }
+    });
   </script>
 
 </body>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Materialize CSS -->
+  <link rel="stylesheet" href="./css/materialize.css">
+
+  <!-- My Style CSS -->
+  <link rel="stylesheet" href="./css/style.css">
+
+  <title>Materialize - Forms</title>
+</head>
+
+<body>
+  <div class="container">
+
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <input type="text" id="nome" placeholder="Informe seu nome completo" data-length="10">
+          <label for="nome">Nome:</label>
+        </div>
+        <div class="input-field col s6">
+          <i class="material-icons prefix">email</i>
+          <input type="email" id="email" class="validate">
+          <label for="email">E-mail:</label>
+          <span class="helper-text" data-error="E-mail inválido" data-success="OK"></span>
+        </div>
+
+        <div class="input-field col s5">
+          <i class="material-icons prefix">phone</i>
+          <input type="tel" id="fone">
+          <label for="fone">Telefone:</label>
+        </div>
+
+        <div class="input-field col s7">
+          <input id="input_text" type="text" data-length="10">
+          <label for="input_text">Input text</label>
+        </div>
+
+        <div class="input-field col s4">
+          <select name="" id="">
+            <option value="" disabled selected>Seleciona uma opção</option>
+            <option value="1">Opção 1</option>
+            <option value="2">Opção 2</option>
+            <option value="3">Opção 3</option>
+          </select>
+          <label>Select Simples:</label>
+        </div>
+
+        <div class="input-field col s4">
+          <select multiple>
+            <option value="" disabled>Seleciona uma opção</option>
+            <option value="1">Opção 1</option>
+            <option value="2">Opção 2</option>
+            <option value="3">Opção 3</option>
+          </select>
+          <label>Select Multiplos:</label>
+        </div>
+
+        <div class="input-field col s4">
+          <select name="" id="">
+            <option value="" disabled selected>Seleciona uma opção</option>
+            <optgroup label="Grupo 1">
+              <option value="1">Opção 1</option>
+              <option value="2">Opção 2</option>
+              <option value="3">Opção 3</option>
+            </optgroup>
+            <optgroup label="Grupo 2">
+              <option value="4">Opção 4</option>
+              <option value="5">Opção 5</option>
+              <option value="6">Opção 6</option>
+            </optgroup>
+          </select>
+          <label>Select Agrupado:</label>
+        </div>
+
+        <div class="input-field col s12">
+          <i class="material-icons prefix">edit_mode</i>
+          <textarea name="obs" id="obs" cols="30" rows="10" class="materialize-textarea"></textarea>
+          <label for="obs">Observações:</label>
+        </div>
+
+        <div class="input-field col s3">
+          <input type="date" class="datepicker" id="data">
+          <label for="data">Data:</label>
+        </div>
+
+        <div class="input-field col s3">
+          <input type="time" class="timepicker" id="hora">
+          <label for="hora">Horário:</label>
+        </div>
+
+      </div>
+    </form>
+
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+  <!-- Materialize JS -->
+  <script src="./js/materialize.js"></script>
+
+  <script>
+
+    $(document).ready(function () {
+
+      //  Código de inicialização do contador de caracteres
+      $('input#input_text, input#nome').characterCounter();
+
+      //  código de inicialização do autoComplete
+      $('#input_text').autocomplete({
+        data: {
+          "Apple": null,
+          "Microsoft": null,
+          "Google": 'https://imagens.canaltech.com.br/empresas/690.400.jpg',
+        },
+        limit: 20,  //máximo de resultados que pode ser listado. Default = Infinity
+        onAutocomplete: function (value) {
+          //callback quando valor é autocompletado
+          console.log(value);
+        },
+        minLength: 1  //Minimo de caractares para auto completar
+      });
+
+      //  Código de inicialização do selector
+      $('select').formSelect();
+
+      //  Código de inicialização do datepicker
+      $('.datepicker').pickadate({
+        selectMonths: true, //  cria um dropdown para controlar os meses
+        selectYears: 15     //  cria um dropdown com 15 anos para controlar os anos
+        //  *** PARA TRADUÇÃO: procurar por 'materialize datepicker' no google, entrar no github oficial do materialize...
+      });
+
+      //  Código de inicialização do 'timepicker' com as configurações default
+      //  Mais sobre pickers: https://materializecss.com/pickers.html
+      $('.timepicker').timepicker();
+
+    });
+  </script>
+
+</body>
+
+</html>
