@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Materialize CSS -->
+  <link rel="stylesheet" href="./css/materialize.css">
+
+  <!-- My Style CSS -->
+  <link rel="stylesheet" href="./css/style.css">
+
+  <title>Materialize - Feature Discovery</title>
+</head>
+
+<body>
+  <!-- Element Showed -->
+  <div class="fixed-action-btn">
+    <a id="menu" class="waves-effect waves-light btn btn-floating btn-large"><i class="material-icons">menu</i></a>
+  </div>
+
+  <!-- Tap Target Structure -->
+  <div class="tap-target teal white-text" data-target="menu">
+    <div class="tap-target-content">
+      <h5 class="center">Novidade!<i class="material-icons yellow-text large">new_releases</i></h5>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur ducimus maiores voluptatem autem. Officia modi beatae dolores illum fugiat quia?</p>
+    </div>
+  </div>
+
+  <button class="btn" id="abrir">Abrir</button>
+  <button class="btn" id="fechar">Fechar</button>
+
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+  <!-- Materialize JS -->
+  <script src="./js/materialize.js"></script>
+
+  <script>
+    const options = {
+      onOpen: () => {
+        console.log("Abrindo callback...");
+      },
+      onClose: () => {
+        console.log("Fechando callback...");
+      }
+    };
+
+    let instance;
+    document.addEventListener('DOMContentLoaded', function () {
+      var elems = document.querySelectorAll('.tap-target');
+      instance = M.TapTarget.init(elems, options)[0];
+    });
+
+    const btnAbrir = document.querySelector("#abrir");
+    btnAbrir.addEventListener('click', () => {
+      instance.open();
+    });
+
+    const btnFechar = document.querySelector("#fechar");
+    btnFechar.addEventListener('click', () => {
+      instance.close();
+    });
+
+
+
+  </script>
+
+</body>
+
+</html>

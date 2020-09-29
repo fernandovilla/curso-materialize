@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Materialize CSS -->
+  <link rel="stylesheet" href="./css/materialize.css">
+
+  <!-- My Style CSS -->
+  <link rel="stylesheet" href="./css/style.css">
+
+  <title>Materialize - Collapsible</title>
+</head>
+
+<body>
+  <a href="#teste" class="btn modal-trigger">Abrir Teste</a>
+
+  <div class=" modal" id="teste">
+    <div class="modal-content">
+      <h4 class="light">Título</h4>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga, quam porro, nulla tenetur earum corporis eaque provident aliquam, commodi eum exercitationem maiores. Non suscipit quibusdam quidem. Consequatur quae possimus error voluptatem accusantium sed vitae, voluptates asperiores quisquam deserunt non ipsa fuga odit nihil nisi suscipit maiores exercitationem similique cumque! Neque culpa architecto dicta, eius doloremque repellat sit, facere amet, sed ab ullam! Ipsum, similique. A quisquam magni minima, saepe aperiam architecto, quae reprehenderit itaque deserunt voluptatem quo quis est quasi doloribus dolorum facere animi vitae? Saepe eos nihil voluptatem error dolor debitis, tenetur rem dolores vel ipsa optio placeat quaerat.</p>
+    </div>
+    <div class="modal-footer">
+      <a href="" class="btn">Sair</a>
+    </div>
+  </div>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+  <!-- Materialize JS -->
+  <script src="./js/materialize.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var elems = document.querySelectorAll('.modal');
+      const options = {};
+      var instances = M.Modal.init(elems, options);
+    });
+
+  </script>
+
+</body>
+
+</html>

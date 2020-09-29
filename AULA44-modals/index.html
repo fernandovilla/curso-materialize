@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Materialize CSS -->
+  <link rel="stylesheet" href="./css/materialize.css">
+
+  <!-- My Style CSS -->
+  <link rel="stylesheet" href="./css/style.css">
+
+  <title>Materialize - Collapsible</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <ul class="collapsible col s5">
+        <li>
+          <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
+          <div class="collapsible-body"><span>Lorem ipsum dolor, sit amet consectetur adipisicing.</span></div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
+          <div class="collapsible-body"><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, nam?</span></div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
+          <div class="collapsible-body">
+            <h5>Título...</h5>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus neque aut corporis molestias nemo, dolor minus provident dolorem suscipit dicta corrupti voluptas eos! Ratione inventore laborum eligendi aspernatur fuga aliquam, mollitia quibusdam, minima adipisci magnam dolor, voluptatibus aut explicabo non hic quae laboriosam! Aperiam vitae incidunt similique libero sequi. Corrupti asperiores illo, vitae, quasi expedita labore harum optio neque rem possimus officia, corporis fugit quis praesentium sed porro nam a?</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+  <!-- Materialize JS -->
+  <script src="./js/materialize.js"></script>
+
+  <script>
+    //  Inicializaçao do 'collapsible'
+    document.addEventListener('DOMContentLoaded', function () {
+      var elems = document.querySelectorAll('.collapsible');
+      const options = {};
+      var instances = M.Collapsible.init(elems, options);
+    });
+
+  </script>
+
+</body>
+
+</html>
