@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Materialize CSS -->
+  <link rel="stylesheet" href="./css/materialize.css">
+
+  <!-- My Style CSS -->
+  <link rel="stylesheet" href="./css/style.css">
+
+  <title>Materialize - Toasts & Tooltips</title>
+</head>
+
+<body>
+  <button class="btn tooltipped" data-position="bottom" data-tooltip="Exibe o Toast" id="toast">Toast</button>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+  <!-- Materialize JS -->
+  <script src="./js/materialize.js"></script>
+
+  <script>
+    const btnToast = document.querySelector("#toast");
+    btnToast.addEventListener("click", () => {
+      const options = {
+        html: 'Hello world toast!',   // texto que será exibido
+        displayLength: 2000,          //  tempo que ficará sendo exibido
+        completeCallback: () => {
+          console.log("Concluído...");
+        }
+      }
+      M.toast(options);
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+      var elems = document.querySelectorAll('.tooltipped');
+      var options = {
+        enterDelay: 500
+      };
+      var instances = M.Tooltip.init(elems, options);
+    });
+
+  </script>
+
+</body>
+
+</html>
