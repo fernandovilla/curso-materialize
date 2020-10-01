@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Materialize CSS -->
+  <link rel="stylesheet" href="./css/materialize.css">
+
+  <!-- My Style CSS -->
+  <link rel="stylesheet" href="./css/style.css">
+
+  <title>Materialize - Tabs</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row card">
+      <div class="col s12">
+        <ul class="tabs tabs-fixed-width">
+          <li class="tab col s3"><a href="#tab1"">Tab1</a></li>
+          <li class=" tab col s3"><a href="#tab2" class="active">Tab2</a></li>
+          <li class="tab col s3 disabled"><a href="#tab3">Tab3</a></li>
+          <li class="tab col s3"><a href="#tab4">Tab4</a></li>
+          <li class="tab col s3"><a href="#tab5">Tab5</a></li>
+        </ul>
+      </div>
+
+      <div id="tab1" class="col s12">
+        <h6>Conteúdo da Tab1</h6>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum illo dolorem voluptatum tempora. Quidem odio fugiat sequi unde vel, delectus minus ipsum, neque, laborum ullam voluptatem rem quae nisi modi blanditiis porro adipisci magnam. Qui suscipit dicta molestiae aperiam ipsum aut nulla recusandae? Dolore pariatur quam commodi maxime accusamus veniam, illum quisquam iste natus sint, dolorum, neque sit nulla. Fugiat, aperiam consectetur vel voluptatibus minima optio cupiditate quod dignissimos quo maiores tempore debitis assumenda minus rerum. Laboriosam modi perspiciatis dolores, aspernatur, molestiae dicta at a ut amet dolorum consectetur voluptate unde cumque? Voluptatibus repudiandae voluptate tenetur quam obcaecati asperiores animi?</p>
+      </div>
+
+      <div id="tab2" class="col s12">
+        <h6>Conteúdo da Tab2</h6>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum illo dolorem voluptatum tempora. Quidem odio fugiat sequi unde vel, delectus minus ipsum, neque, laborum ullam voluptatem rem quae nisi modi blanditiis porro adipisci magnam. Qui suscipit dicta molestiae aperiam ipsum aut nulla recusandae? Dolore pariatur quam commodi maxime accusamus veniam, illum quisquam iste natus sint, dolorum, neque sit nulla. Fugiat, aperiam consectetur vel voluptatibus minima optio cupiditate quod dignissimos quo maiores tempore debitis assumenda minus rerum. Laboriosam modi perspiciatis dolores, aspernatur, molestiae dicta at a ut amet dolorum consectetur voluptate unde cumque? Voluptatibus repudiandae voluptate tenetur quam obcaecati asperiores animi?</p>
+      </div>
+
+      <div id="tab3" class="col s12">
+        <h6>Conteúdo da Tab3</h6>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum illo dolorem voluptatum tempora. Quidem odio fugiat sequi unde vel, delectus minus ipsum, neque, laborum ullam voluptatem rem quae nisi modi blanditiis porro adipisci magnam. Qui suscipit dicta molestiae aperiam ipsum aut nulla recusandae? Dolore pariatur quam commodi maxime accusamus veniam, illum quisquam iste natus sint, dolorum, neque sit nulla. Fugiat, aperiam consectetur vel voluptatibus minima optio cupiditate quod dignissimos quo maiores tempore debitis assumenda minus rerum. Laboriosam modi perspiciatis dolores, aspernatur, molestiae dicta at a ut amet dolorum consectetur voluptate unde cumque? Voluptatibus repudiandae voluptate tenetur quam obcaecati asperiores animi?</p>
+      </div>
+
+      <div id="tab4" class="col s12">
+        <h6>Conteúdo da Tab4</h6>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum illo dolorem voluptatum tempora. Quidem odio fugiat sequi unde vel, delectus minus ipsum, neque, laborum ullam voluptatem rem quae nisi modi blanditiis porro adipisci magnam. Qui suscipit dicta molestiae aperiam ipsum aut nulla recusandae? Dolore pariatur quam commodi maxime accusamus veniam, illum quisquam iste natus sint, dolorum, neque sit nulla. Fugiat, aperiam consectetur vel voluptatibus minima optio cupiditate quod dignissimos quo maiores tempore debitis assumenda minus rerum. Laboriosam modi perspiciatis dolores, aspernatur, molestiae dicta at a ut amet dolorum consectetur voluptate unde cumque? Voluptatibus repudiandae voluptate tenetur quam obcaecati asperiores animi?</p>
+      </div>
+
+      <div id="tab5" class="col s12">
+        <h6>Conteúdo da Tab5</h6>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum illo dolorem voluptatum tempora. Quidem odio fugiat sequi unde vel, delectus minus ipsum, neque, laborum ullam voluptatem rem quae nisi modi blanditiis porro adipisci magnam. Qui suscipit dicta molestiae aperiam ipsum aut nulla recusandae? Dolore pariatur quam commodi maxime accusamus veniam, illum quisquam iste natus sint, dolorum, neque sit nulla. Fugiat, aperiam consectetur vel voluptatibus minima optio cupiditate quod dignissimos quo maiores tempore debitis assumenda minus rerum. Laboriosam modi perspiciatis dolores, aspernatur, molestiae dicta at a ut amet dolorum consectetur voluptate unde cumque? Voluptatibus repudiandae voluptate tenetur quam obcaecati asperiores animi?</p>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+  <!-- Materialize JS -->
+  <script src="./js/materialize.js"></script>
+
+  <script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+      var elems = document.querySelectorAll('.tabs');
+      var options = {
+        //swipeable: true,
+        //responsiveThreshold: 400
+      };
+      var instance = M.Tabs.init(elems, options);
+    });
+  </script>
+
+</body>
+
+</html>
