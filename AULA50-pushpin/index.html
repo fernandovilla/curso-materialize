@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Materialize CSS -->
+  <link rel="stylesheet" href="./css/materialize.css">
+
+  <!-- My Style CSS -->
+  <link rel="stylesheet" href="./css/style.css">
+
+  <title>Materialize - Pushpin</title>
+</head>
+
+<body>
+
+  <div class="bloco teal ">
+    <nav class="teal pushpin">
+      <div class="nav-wrapper">
+        <a href="" class="brand-logo">Logo</a>
+        <ul id="nav-mobile" class="right">
+          <li><a href="#">Sass</a></li>
+          <li><a href="#">Components</a></li>
+          <li><a href="#">Javascript</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+
+  <div class="bloco red">
+    <div class="container">
+      <nav class="red">
+        <div class="nav-wrapper">
+          <a href="" class="brand-logo">Logo</a>
+          <ul id="nav-mobile" class="right">
+            <li><a href="#">Sass</a></li>
+            <li><a href="#">Components</a></li>
+            <li><a href="#">Javascript</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    
+  </div>
+  
+
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+  <!-- Materialize JS -->
+  <script src="./js/materialize.js"></script>
+
+  <script>
+    
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.pushpin');
+      var options = {
+        top: 0,         //fixa na posição 0 da tela
+        bottom: 200,    //depois de rolados 200px, deixa de ser fixo   
+        offset: 0,      //distancia do topo
+
+      };
+      var instances = M.Pushpin.init(elems, options);
+    });
+  </script>
+
+</body>
+
+</html>
